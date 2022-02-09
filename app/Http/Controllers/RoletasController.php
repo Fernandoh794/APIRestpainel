@@ -23,7 +23,7 @@ class RoletasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -54,7 +54,7 @@ class RoletasController extends Controller
      * @param  \App\Models\Roletas  $roletas
      * @return \Illuminate\Http\Response
      */
-   
+
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +67,6 @@ class RoletasController extends Controller
     {
         $dadosantigos = Roletas::find($id);
         $dadosantigos->update($request->all());
-
-      
-        
     }
 
     /**
@@ -78,8 +75,11 @@ class RoletasController extends Controller
      * @param  \App\Models\Roletas  $roletas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Roletas $roletas)
-    {
-        //
+    public function destroy($id)
+       
+    { 
+        $dadosdestroy = Roletas::find($id);
+        $dadosdestroy->delete();
+        return ['msg' => 'O Registro foi removido'];
     }
 }
