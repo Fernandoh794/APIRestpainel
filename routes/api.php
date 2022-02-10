@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Route\RoletasController;
+use Illuminate\Support\Facades\Route\RoletasCon;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +20,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource('roletas', 'App\http\Controllers\RoletasController');
